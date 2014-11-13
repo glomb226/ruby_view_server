@@ -1,0 +1,14 @@
+<h1> Hello There</h1>
+<%name="glomb"%>
+<h2> My name is <%=name.upcase%>!</h2>
+<p>
+  The time is now:
+  2014-11-13 16:59:41 -0600
+</p>
+
+<img src=http://www.topgear.com/uk/assets/cms/78e0b500-adb0-4294-a4da-78e4e456604b/Large%20Image%20(optional).jpg>
+<ul>
+  <% ['exhaust', 'header', 'wheels'].each do |stuff| %>
+    <li>I will modify the <%= stuff %></li>
+  <% end %>
+</ul>
