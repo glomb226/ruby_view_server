@@ -1,4 +1,21 @@
 <html>
+
+ <% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+    Hello there <%= @request.query['first_name'] %> you are a <%= @request.query['sex'] %>
+  <% else %>
+    Enter thy name
+        <form method='post' action="<%= @request.path %>">
+        First name: <input type="text" name="first_name" placeholder='first name'/>
+        <br />
+
+    Enter gender: <br>
+<input type="radio" name="sex" value="male" checked>Male
+<br>
+<input type="radio" name="sex" value="female">Female <br>
+<input type="submit" value="Submit" />
+<% end %>
+</form>
+
  <%
     def link_to(name, url)
         return "<a href='#{url}'>#{name}</a>"
